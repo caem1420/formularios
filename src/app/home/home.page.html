@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Formulario 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Formulario 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" position="stacked">Nombre completo</ion-label>
+      <ion-input placeholder="Nombre" [(ngModel)]="nombreCompleto"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" position="stacked">Cedula</ion-label>
+      <ion-input placeholder="Cedula" [(ngModel)]="cedula"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label color="primary" position="stacked">Id</ion-label>
+      <ion-input placeholder="Id" [(ngModel)]="id"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" position="stacked">Fecha de Nacimiento</ion-label>
+      <ion-datetime [(ngModel)]="fechaNacimiento" displayFormat="MM DD YYYY" placeholder="Fecha Nacimiento">
+      </ion-datetime>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label color="primary" position="stacked">Ocupacion</ion-label>
+      <ion-input placeholder="Ocupacion" [(ngModel)]="ocupacion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Padre de familia</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="padreFamilia"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label color="primary" position="stacked">E-mail</ion-label>
+    <ion-input type="email" placeholder="E-mail" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" position="stacked">EPS</ion-label>
+    <ion-input placeholder="EPS" [(ngModel)]="eps"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" position="stacked">ARL</ion-label>
+    <ion-input placeholder="ARL" [(ngModel)]="arl"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" position="stacked">Telefono Fijo</ion-label>
+    <ion-input placeholder="Telefono fijo" [(ngModel)]="telFijo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" position="stacked">Celular</ion-label>
+    <ion-input placeholder="Telefono Celular" [(ngModel)]="celular"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label color="primary" position="stacked">Nombre Profesor Practicas</ion-label>
+    <ion-input placeholder="Nombre del Profesor" [(ngModel)]="nombreProfesor"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" position="stacked">Celular Profesor Practicas</ion-label>
+    <ion-input placeholder="Celular del Profesor" [(ngModel)]="celularProfesor"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" color="dark" shape="round" (click)="generarPdf()">Enviar!</ion-button>
+</ion-content>
